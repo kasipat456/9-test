@@ -1,0 +1,185 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataSource">
+      <ConnectionProperties>
+        <DataProvider>SQL</DataProvider>
+        <ConnectString />
+      </ConnectionProperties>
+      <rd:SecurityType>None</rd:SecurityType>
+    </DataSource>
+  </DataSources>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <Height>2in</Height>
+        <Style />
+      </Body>
+      <Width>6.5in</Width>
+      <Page>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <Code>Public Function BlankZero(ByVal Value As Decimal)
+    if Value = 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankPos(ByVal Value As Decimal)
+    if Value &gt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankZeroAndPos(ByVal Value As Decimal)
+    if Value &gt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNeg(ByVal Value As Decimal)
+    if Value &lt; 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+
+Public Function BlankNegAndZero(ByVal Value As Decimal)
+    if Value &lt;= 0 then
+        Return ""
+    end if
+    Return Value
+End Function
+</Code>
+  <Language>=User!Language</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>0eeb6585-38ae-40f1-885b-8d50088d51b4</rd:ReportID>
+  <DataSets>
+    <DataSet Name="DataSet_Result">
+      <Fields>
+        <Field Name="LoopNum">
+          <DataField>LoopNum</DataField>
+        </Field>
+        <Field Name="VAT_RegistrationNo">
+          <DataField>VAT_RegistrationNo</DataField>
+        </Field>
+        <Field Name="Document_Date">
+          <DataField>Document_Date</DataField>
+        </Field>
+        <Field Name="Amount1">
+          <DataField>Amount1</DataField>
+        </Field>
+        <Field Name="Amount1Format">
+          <DataField>Amount1Format</DataField>
+        </Field>
+        <Field Name="City">
+          <DataField>City</DataField>
+        </Field>
+        <Field Name="Address">
+          <DataField>Address</DataField>
+        </Field>
+        <Field Name="Name_Company">
+          <DataField>Name_Company</DataField>
+        </Field>
+        <Field Name="Address_Company">
+          <DataField>Address_Company</DataField>
+        </Field>
+        <Field Name="Address_2_Company">
+          <DataField>Address_2_Company</DataField>
+        </Field>
+        <Field Name="City_Company">
+          <DataField>City_Company</DataField>
+        </Field>
+        <Field Name="Phone_No_Company">
+          <DataField>Phone_No_Company</DataField>
+        </Field>
+        <Field Name="Picture_Company">
+          <DataField>Picture_Company</DataField>
+        </Field>
+        <Field Name="Contact_Person_Company">
+          <DataField>Contact_Person_Company</DataField>
+        </Field>
+        <Field Name="Post_Code_Company">
+          <DataField>Post_Code_Company</DataField>
+        </Field>
+        <Field Name="CopyText">
+          <DataField>CopyText</DataField>
+        </Field>
+        <Field Name="OriginalText">
+          <DataField>OriginalText</DataField>
+        </Field>
+        <Field Name="CardNumber1">
+          <DataField>CardNumber1</DataField>
+        </Field>
+        <Field Name="CardNumber2">
+          <DataField>CardNumber2</DataField>
+        </Field>
+        <Field Name="CardNumber3">
+          <DataField>CardNumber3</DataField>
+        </Field>
+        <Field Name="CardNumber4">
+          <DataField>CardNumber4</DataField>
+        </Field>
+        <Field Name="CardNumber5">
+          <DataField>CardNumber5</DataField>
+        </Field>
+        <Field Name="CardNumber6">
+          <DataField>CardNumber6</DataField>
+        </Field>
+        <Field Name="CardNumber7">
+          <DataField>CardNumber7</DataField>
+        </Field>
+        <Field Name="CardNumber8">
+          <DataField>CardNumber8</DataField>
+        </Field>
+        <Field Name="CardNumber9">
+          <DataField>CardNumber9</DataField>
+        </Field>
+        <Field Name="CardNumber10">
+          <DataField>CardNumber10</DataField>
+        </Field>
+        <Field Name="CardNumber11">
+          <DataField>CardNumber11</DataField>
+        </Field>
+        <Field Name="CardNumber12">
+          <DataField>CardNumber12</DataField>
+        </Field>
+        <Field Name="CardNumber13">
+          <DataField>CardNumber13</DataField>
+        </Field>
+        <Field Name="CardNumber_No">
+          <DataField>CardNumber_No</DataField>
+        </Field>
+        <Field Name="No__L">
+          <DataField>No__L</DataField>
+        </Field>
+        <Field Name="LineNo___L">
+          <DataField>LineNo___L</DataField>
+        </Field>
+        <Field Name="Description___L">
+          <DataField>Description___L</DataField>
+        </Field>
+        <Field Name="Quantity___L">
+          <DataField>Quantity___L</DataField>
+        </Field>
+        <Field Name="Price">
+          <DataField>Price</DataField>
+        </Field>
+        <Field Name="PriceFormat">
+          <DataField>PriceFormat</DataField>
+        </Field>
+      </Fields>
+      <Query>
+        <DataSourceName>DataSource</DataSourceName>
+        <CommandText />
+      </Query>
+    </DataSet>
+  </DataSets>
+</Report>
